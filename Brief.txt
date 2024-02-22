@@ -1,0 +1,89 @@
+ 
+ Requirements:
+ 
+ 
+All customers can view wide range of products; however, if they decide to buy one, they must first signup and
+thereafter login in order to add that product to their shopping cart. Before purchasing a product, customers can
+look at the reviews left by other people. Customer can add as many products to their shopping cart as they
+desire. The customers can then adjust the quantity of a product added to the cart. Finally, during checkout,
+Customers can provide their details, and place their order by paying the amount according to their order. The
+admin can then view the customer's information, including his or her order information and the address to
+which the order should be delivered and also whether the payment is paid or not
+
+
+Functional Requirements:
+
+> Products:
+   > Categories
+   > Catalogue
+   > Choose variations based on sizes and colors
+   > Search for Products
+   > Reviews products when logged in 
+
+> Cart:
+  > Add to Cart or decrease the number of items in the cart or remove the whole cart
+  > Billing address
+  > place an order
+  > preview your order
+  > Intergrated payment system
+  > Cart completion page with 'payment successful' message and a button to shop more
+
+> User:
+  > Register and log in and log out
+  > place an order
+  > Dashboard with my orders, edit profile, change password and log out button 
+  > forget password with token verifications
+  > registration with token
+
+> Admin panel:
+  > secure log in
+  > fake form for security
+  > You can view log in attempts
+  > Orders with :
+    > order products
+    > orders
+    > payments
+  > Cart:
+    > cart items
+    > Categories
+> Store:
+  > product gallery
+  > products
+  > Review Ratings
+  > variations
+
+
+None Functional Requirements:
+
+> Low Latency
+> Efficiency
+> Resilience
+> High Scalability
+> High Availability
+> High consistency
+> Maintainability
+> Usebility
+
+Deployment:
+
+> AWS:
+  > Beanstalk
+  > S3
+  > IAM
+  > RDS
+  > EC2
+
+
+Architecture:
+
+> It will be an event Driven Microservice Architecture for high availability and high scalability.
+> I will have three services:
+  > Inventory service with it's own database and API
+  > Order Service with it's own database and API
+  > User service with it's own database and API
+
+Communication:
+
+> For high availability and high scalability, the services needs to be de-coupled and communicate asynchronously
+> I will use a queue system called Kafka for it's high throughput
+> 
