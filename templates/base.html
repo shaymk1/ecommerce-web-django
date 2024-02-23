@@ -4,12 +4,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    {% comment %} bootsrap {% endcomment %}
+    <!-- Bootstrap-->
     <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}" />
     <link rel="stylesheet" href="{% static 'css/responsive.css' %}" />
+    <!-- custom css -->
     <link rel="stylesheet" href="{% static 'css/responsive.css.map' %}" />
     <link rel="stylesheet" href="{% static 'css/ui.css' %}" />
     <link rel="stylesheet" href="{% static 'css/ui.css.map' %}" />
+
+    <!-- favicon -->
+
+    <link href="{% static 'images/favicon.ico' %}" rel="shortcut icon" type="image/x-icon" />
 
     <!-- Remix icons -->
     <link
@@ -17,6 +22,12 @@
       rel="stylesheet"
     />
     {% block title %}Love Life{% endblock title %}
+    <!-- jQuery starts -->
+    <script type="text/javascript">
+      $(document).ready(function () {});
+    </script>
+
+    <!-- jQuery ends -->
   </head>
   <body>
     {% include "navbar.html" %} {% block content %}{% endblock content %} {%
