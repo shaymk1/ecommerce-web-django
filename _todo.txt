@@ -209,6 +209,7 @@
 # Outside the urls pattern:
   > urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
   > urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+  > py manage.py collectstatics
 
 ##############################################
       Creating templates
@@ -320,3 +321,7 @@ class Post(models.Model):
 # py manage.py migrate
 # py manage.py runserver
 # go to admin panel, and  put your username and password there
+
+################################################################
+Create  Custom User model To log in instead of using Admin
+#################################################################
