@@ -395,5 +395,14 @@ Pre-populating the slugfield
 admin.site.register(Category, CategoryAdmin)
 
 
+################################################################
+create a store app
+#################################################################
 
+# In the store app models, create a Product model
+# Give it a field of category, with a ForiegnKey of Category, that you need to import from the Category app models
+# Specify that on_delete=models.CASCADE
+# create a ProductAdmin class which takes in admin.ModelAdmin to prepopulate the slugs and list_display, and list_display_links if you want
+# register the model in the admin file, both imported and the one for prepopulating the slug
+# make migrations and migrate
 
