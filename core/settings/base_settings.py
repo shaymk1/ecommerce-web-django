@@ -34,7 +34,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'store',
     'category',
-    
+    'accounts',
+
 ]
 
 MIDDLEWARE = [
@@ -66,6 +67,8 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'core.wsgi.application'
+# telling settings that we are using custom user accounts
+AUTH_USER_MODEL = 'accounts.Account'
 
 
 # Database
@@ -141,9 +144,6 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'
 STATICFILES_DIRS = [
     'core/static',
  ]
-
-
-
 
 
 # Default primary key field type

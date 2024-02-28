@@ -1,3 +1,9 @@
+#### Removing trailing white space
+
+# press F1 and then type 'trim trailing whitespace'
+
+
+
 ############ INITIAL SETUP ######
 
 # create a virtual environment:
@@ -300,6 +306,10 @@ class Post(models.Model):
     class Meta:
         ordering = ("-created_at",)  # decending order
 
+    class Meta:
+        verbose_name = 'category'
+        verbose_name_plural = 'categories'
+
     def __str__(self):
         return self.title
 
@@ -325,3 +335,34 @@ class Post(models.Model):
 ################################################################
 Create  Custom User model To log in instead of using Admin
 #################################################################
+
+# Create accounts app and register it in the base_settings
+# in the accounts app model file:
+  > from django.contrib.auth.models import AbstractBaseUser, BaseUserManager
+# create a class of MyAccountManager which takes in BaseUserManager
+  > create a function for normal user and the one for super_user
+# Create an Accounts models which takes in AbstractBaseUser
+# create the fields you need for that model like first_name, last_name, username, email,phone_number
+# define the required fields like dtae_joined and last_login with auto_now_add = True, is_admin, is_staff, is_active, is_admin default being False
+# Also the required fields when you login as follows:
+  > USERNAME_FIELD = 'email'
+  > REQUIRED_FILED = ['username', 'first_name', 'last_name']
+# tell the Acounts models that you are using the MyAccountManager by calling it with objects=MyAccountManager()
+# define a string representation which is going to return the self.email
+# define a function that has_perm(self,perm,obj=None) which is going to return self.is_admin
+# define a function that has_module_perms(self, add_label) which is always going to return True
+# telling settings that we are using custom user accounts:
+    > AUTH_USER_MODEL = 'accounts.Account'
+# Register your models in admin file
+# Delete an old sqlite DB  and any migrations file present
+# Make migrations and migrate
+
+################################################################
+Create  super_user
+#################################################################
+
+
+# email is admin12@gmail.com
+# anything else is admin
+# password is known to you
+
