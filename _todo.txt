@@ -366,3 +366,14 @@ Create  super_user
 # anything else is admin
 # password is known to you
 
+################################################################
+Make password not readable from admin dashboard
+#################################################################
+
+# in the accounts'app , in the admin file:
+  > 
+
+
+
+
+
