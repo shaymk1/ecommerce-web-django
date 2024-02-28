@@ -406,3 +406,21 @@ create a store app
 # register the model in the admin file, both imported and the one for prepopulating the slug
 # make migrations and migrate
 
+####### git commit #####
+#### git commit -m 'created a Product model in the sore app models file, created a ProductAdmin class in the admin file to preporpulate the slug and for list_display, registered both models'
+
+
+################################################################
+Adding Products and Category in the Admin Panel
+#################################################################
+
+# Add products and categories after migrations
+
+################################################################
+Displaying Products in Home Page
+#################################################################
+
+# got to the core views.py
+# under the home function, make a variable called products to querry the Product model and filter by is_available
+# got to store templates, go to the home.html and dynamically code the products using the for loop
+ 
