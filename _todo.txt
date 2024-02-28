@@ -423,4 +423,24 @@ Displaying Products in Home Page
 # got to the core views.py
 # under the home function, make a variable called products to querry the Product model and filter by is_available
 # got to store templates, go to the home.html and dynamically code the products using the for loop
- 
+
+
+################################################################
+Setting Up the Store Page
+#################################################################
+
+# include store the urls in the core settings urls
+# Go to the store urls and include the store path after importing views, also let it go to home first('')
+# make the same function as the home function for store in the store views
+# Dynanically call the products in the store.html with the for loop
+# add product_count in the function as well as pass it in the context
+# go to the store template and dynamically change it to {{product_count}}, no need to loop here 
+
+################################################################
+Displaying products by category
+#################################################################
+
+# we need a user when they click the category, it matches with the slug
+# in the store.urls file:
+  > path('<slug: category_slug/>', views.store, name='products_by_category'),
+# got to the store view, store function, accept the slug as well with request by saying : category_slug=None
