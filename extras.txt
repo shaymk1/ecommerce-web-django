@@ -198,3 +198,33 @@
 			</figcaption>
 		</figure>
 	</div> <!-- col.// -->
+
+############ navbar.html #########
+
+	
+              <a class="dropdown-item" href="#"
+                >Consumer Electronics / Home Appliances
+              </a>
+
+              <a class="dropdown-item" href="#">Auto / Transportation</a>
+
+              <a class="dropdown-item" href="#"
+                >Apparel / Textiles / Timepieces
+              </a>
+
+              <a class="dropdown-item" href="#"
+                >Home & Garden / Construction / Lights
+              </a>
+
+              <a class="dropdown-item" href="#"
+                >Beauty & Personal Care / Health
+              </a>
+
+############ store.html #########
+
+<li><a href="#">Watches </a></li>
+				<li><a href="#">Cinema  </a></li>
+				<li><a href="#">Clothes  </a></li>
+				<li><a href="#">Home items </a></li>
+				<li><a href="#">Animals</a></li>
+				<li><a href="#">People </a></li>

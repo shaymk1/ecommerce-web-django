@@ -444,3 +444,26 @@ Displaying products by category
 # in the store.urls file:
   > path('<slug: category_slug/>', views.store, name='products_by_category'),
 # got to the store view, store function, accept the slug as well with request by saying : category_slug=None
+
+################################################################
+Context processor
+#################################################################
+
+# It will help us list all the products in a certain category when clicking on a category
+# helps diplsy categories and their children in the navbar
+# Go to category app and create context_processors.py
+# Tell base_settings that you are using context_processors like so :
+  > 'category.context_processors.menu_links',
+# go to the navbar and :
+  >  {% for category  in links %}
+              <a class="dropdown-item" href="{{category.get_url}}"
+                >{{category.category_name}}
+              </a>
+      {% endfor %}
+# links is from the context_processors and category_name is from the model, category.get_url is from the function
+# for the links to actually go somewhere, we need to get category slug or url by creating a get_url function in the models like so:
+      > def get_url(self):
+        return reverse('products_by_category', args=[self.slug])
+# products_by_category is from the path pf category_slug and where name is "products_by_category" in the store urls.py file
+# the self.slug, the slug from the category slug field
+# go to store.html and do the same thing under categories
