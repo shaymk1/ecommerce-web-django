@@ -467,3 +467,21 @@ Context processor
 # products_by_category is from the path pf category_slug and where name is "products_by_category" in the store urls.py file
 # the self.slug, the slug from the category slug field
 # go to store.html and do the same thing under categories
+
+
+################################################################
+single product page and view
+#################################################################
+
+# in the store urls, make another path which is going to take the product_slug
+# in the store views, create a product_detail function which is gonna take in category_slug and product_slug
+# we need to access slug by category, the category will be in the store model and the slug will be in the category model
+# go to product-detail.html and get the detailed product dynamically
+
+################################################################
+get url for product
+#################################################################
+
+# if you click on the title of the product, you should go to single product details
+# go to the store model and create get url function with the product_detail path 
+# go to the home.html, under the for loop, replace the href with product.get_url
