@@ -489,7 +489,28 @@ get url for product
 ################################################################
 errors to come back to
 #################################################################
-
+# errors about the redirect now fixed....
 # errors with redirect/urls cannot be found from home.html and navbar.html:
   > when i click on the title or the image , i dont get a redirect to the detailed-page,
-  > wheni click on the store page from the home page, i dont get redirected to the store page
+  > when i click on the store page from the home page, i dont get redirected to the store page
+
+
+################################################################
+product out of stock
+#################################################################
+
+# Go to product-detail, before add to cart button:
+  > {% if sigle_product.stock <=0 %}
+	   <h5>Sorry, this product is out of stock!</h5>
+	{% else %}
+	   <a href="./product-detail.html" class="btn  btn-primary"> <span class="text">Add to cart</span> <i class="fas fa-shopping-cart"></i></a>
+	{% endif %}
+
+
+################################################################
+cart app
+#################################################################
+
+# Create a carts app and register it, it must be plural
+# configure the core urls to include the carts urls
+# configure the carts urls to include the views
