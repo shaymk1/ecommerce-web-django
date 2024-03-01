@@ -514,3 +514,6 @@ cart app
 # Create a carts app and register it, it must be plural
 # configure the core urls to include the carts urls
 # configure the carts urls to include the views
+# Create model called Cart with card_id and date_created fields, and register it.
+# Create another model called cartitem, it has foreignkeys of Cart and Product and accounts
+# make migrations and migrate
