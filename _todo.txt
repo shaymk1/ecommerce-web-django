@@ -485,3 +485,11 @@ get url for product
 # if you click on the title of the product, you should go to single product details
 # go to the store model and create get url function with the product_detail path 
 # go to the home.html, under the for loop, replace the href with product.get_url, although it did not work, and i don't why
+
+################################################################
+errors to come back to
+#################################################################
+
+# errors with redirect/urls cannot be found from home.html and navbar.html:
+  > when i click on the title or the image , i dont get a redirect to the detailed-page,
+  > wheni click on the store page from the home page, i dont get redirected to the store page
